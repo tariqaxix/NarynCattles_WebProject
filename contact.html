@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naryn Cattle</title>
+    <link
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("x58ej2EdAGh_7QM9D");
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="Page_Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li>
+            <a id="hiddenCart" href="cart.html"
+              ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="hamburgerMenu">
+        <a href="cart.html"
+          ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+        ></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+    <section id="annoucement" class="blog-header">
+      <h2>#Contact Us 24/7</h2>
+      <p>Complain and sugguestion are highly appreciated!</p>
+    </section>
+    <section id="contact-details" class="section-p1">
+      <div class="details">
+        <span>Contact Details</span>
+        <h2>Our Farm Address</h2>
+        <h3>Main Office</h3>
+        <div>
+          <li>
+            <i class="fal fa-map"></i>
+            <p>310 Lenin Street, Naryn 722918, Kyrgyzstan</p>
+          </li>
+          <li>
+            <i class="fal fa-envelope"></i>
+            <p>naryn_cattle@ucentralasia.com</p>
+          </li>
+          <li>
+            <i class="fal fa-phone-alt"></i>
+            <p>+996 220234234</p>
+          </li>
+          <li>
+            <i class="fal fa-clock"></i>
+            <p>8:00-17:00, Mon - Fri</p>
+          </li>
+        </div>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.432263853263!2d75.89873775094858!3d41.429841379158404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389068a0cabbb013%3A0x1f2377c460cf4da!2sUniversity%20of%20Central%20Asia%20(UCA)%20-%20Naryn!5e0!3m2!1sen!2skg!4v1670706663120!5m2!1sen!2skg"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <section id="form-details">
+      <form action="contact.php" method="post">
+        <span>Leave a message</span>
+        <h2>We love to hear from you</h2>
+        <input type="text" name="firstname" id="name" placeholder="Your Name" />
+        <input type="email" name="email" id="email" placeholder="Email" />
+
+        <input type="text" name="sub" id="sub" placeholder="Subject" />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="message"
+        ></textarea>
+
+        <label>
+          <input
+            type="checkbox"
+            onclick="SendMail()"
+            name="terms"
+            class="check"
+          />
+          Check here to proceed!</label
+        >
+        <br />
+        <input
+          class="btn"
+          type="submit"
+          onclick="return confirm('Are you sure you want to submit?')"
+        />
+        <input class="btn" type="Reset" value="Clear" />
+      </form>
+
+      <div class="people">
+        <div>
+          <img src="img/tariq.jpeg" alt="" />
+          <p>
+            <span>Tariq Aziz</span>CEO Naryn Cattle <br />Phone: 0700297834
+            <br />tariq.aziz@gmail.com
+          </p>
+        </div>
+        <div>
+          <img src="img/zakir.png" alt="" />
+          <p>
+            <span>Zakir Hussain</span>CFO Naryn Cattle <br />Phone: 0700297834
+            <br />zakir.hussain@gmail.com
+          </p>
+        </div>
+        <div>
+          <img src="img/attiullah.png" alt="" />
+          <p>
+            <span>Attiullah Khan</span>HR Officer<br />Phone: 0700297834
+            <br />Attiullah.khan@gmail.com
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="news">
+        <h4>Sign up Now</h4>
+        <p>Get updates about our <span>weekly and monthly discounts.</span></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email address" />
+        <button class="global">Sign Up</button>
+      </div>
+    </section>
+    <footer class="section-p1">
+      <div class="column">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 310 Lenin Street, Naryn 722918</p>
+        <p><strong>Phone:</strong> +996 220234234</p>
+        <p><strong>Hours:</strong>8:00-17:00, Mon - Fri</p>
+        <div class="follow">
+          <h4>Our Social Media</h4>
+          <div class="icon">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Info</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="column">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View Cart</a>
+        <a href="#">My wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="copyright">
+        <p>All the rights are reserved &copy; 2022</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>
